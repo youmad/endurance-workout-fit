@@ -1,0 +1,38 @@
+name: Tests
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        dependencies: [lowest, latest]
+
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
+        with:
+          php-version: '8.5'
+          extensions: dom, mbstring, xml, xmlreader, xmlwriter, pdo_pgsql
+          coverage: none
+          tools: composer:v2
+
+      - run: composer validate --strict
+      - name: Resolve dependencies
+        env:
+          DEPENDENCIES: ${{ matrix.dependencies }}
+        run: |
+          if [ "$DEPENDENCIES" = lowest ]; then
+            composer update --prefer-lowest --prefer-stable --prefer-dist --no-interaction
+          else
+            composer update --prefer-dist --no-interaction
+          fi
+      - run: composer dump-autoload --optimize --strict-psr --strict-ambiguous
+      - run: composer check
+
+      - run: php .github/check-distribution.php
