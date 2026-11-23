@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit\Internal;
+namespace Endurance\WorkoutFit\Internal;
 
-use Youmad\Endurance\Fit\Decoded\DecodedFieldElements;
-use Youmad\Endurance\Fit\Decoded\InvalidFieldElement;
-use Youmad\Endurance\Fit\Decoded\ValidFieldElement;
-use Youmad\Endurance\Fit\Profiled\ProfileNormalizationState;
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
-use Youmad\Endurance\WorkoutFit\FitWorkoutProfileUnavailable;
-use Youmad\Endurance\WorkoutFit\InvalidFitWorkout;
+use Endurance\Fit\Decoded\DecodedFieldElements;
+use Endurance\Fit\Decoded\InvalidFieldElement;
+use Endurance\Fit\Decoded\ValidFieldElement;
+use Endurance\Fit\Profiled\ProfileNormalizationState;
+use Endurance\Fit\Unified\UnifiedDataMessage;
+use Endurance\WorkoutFit\FitWorkoutProfileUnavailable;
+use Endurance\WorkoutFit\InvalidFitWorkout;
 
 /** @internal */
 final readonly class WorkoutFields

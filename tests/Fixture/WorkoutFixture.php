@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit\Tests\Fixture;
+namespace Endurance\WorkoutFit\Tests\Fixture;
 
-use Youmad\Endurance\Fit\Checksum\FitCrc16;
-use Youmad\Endurance\Fit\Decoder\FitDecoder;
-use Youmad\Endurance\Fit\Profile\FieldProfile as F;
-use Youmad\Endurance\Fit\Profile\FieldTransform as T;
-use Youmad\Endurance\Fit\Profile\InMemoryFitProfileRegistry;
-use Youmad\Endurance\Fit\Profile\InMemoryFitTypeRegistry;
-use Youmad\Endurance\Fit\Profile\MessageProfile as M;
-use Youmad\Endurance\Fit\Profile\SubfieldCondition as C;
-use Youmad\Endurance\Fit\Profile\SubfieldProfile as S;
+use Endurance\Fit\Checksum\FitCrc16;
+use Endurance\Fit\Decoder\FitDecoder;
+use Endurance\Fit\Profile\FieldProfile as F;
+use Endurance\Fit\Profile\FieldTransform as T;
+use Endurance\Fit\Profile\InMemoryFitProfileRegistry;
+use Endurance\Fit\Profile\InMemoryFitTypeRegistry;
+use Endurance\Fit\Profile\MessageProfile as M;
+use Endurance\Fit\Profile\SubfieldCondition as C;
+use Endurance\Fit\Profile\SubfieldProfile as S;
 
 /** Hand-written test Profile subset, not generated production data or a fallback. */
 final class WorkoutFixture

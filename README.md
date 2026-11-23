@@ -3,11 +3,11 @@
 Interpret a FIT Workout as an Endurance Workout prescription for PHP 8.5.
 
 ```bash
-composer require youmad/endurance-workout-fit
+composer require endurance/workout-fit
 ```
 
 ```php
-use Youmad\Endurance\WorkoutFit\FitWorkoutReader;
+use Endurance\WorkoutFit\FitWorkoutReader;
 
 $mapping = FitWorkoutReader::standard($profileSet)->read($input, $progress);
 $prescription = $mapping->workout;

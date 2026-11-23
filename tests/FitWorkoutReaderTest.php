@@ -2,28 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit\Tests;
+namespace Endurance\WorkoutFit\Tests;
 
+use Endurance\Fit\Decoder\FitDecoder;
+use Endurance\Fit\Exception\FitDecodeException;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\IO\ResourceFitInput;
+use Endurance\Workout\Duration\DistanceDuration;
+use Endurance\Workout\Duration\OpenDuration;
+use Endurance\Workout\Duration\TimeDuration;
+use Endurance\Workout\Repeat;
+use Endurance\Workout\StepPurpose;
+use Endurance\Workout\Target\FreeTarget;
+use Endurance\Workout\Target\TargetMetric;
+use Endurance\Workout\Target\TargetRange;
+use Endurance\WorkoutFit\FitWorkoutMapping;
+use Endurance\WorkoutFit\FitWorkoutProfileUnavailable;
+use Endurance\WorkoutFit\FitWorkoutReader;
+use Endurance\WorkoutFit\InvalidFitWorkout;
+use Endurance\WorkoutFit\Tests\Fixture\WorkoutFixture as F;
+use Endurance\WorkoutFit\UnsupportedFitWorkout;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
-use Youmad\Endurance\Fit\Decoder\FitDecoder;
-use Youmad\Endurance\Fit\Exception\FitDecodeException;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\IO\ResourceFitInput;
-use Youmad\Endurance\Workout\Duration\DistanceDuration;
-use Youmad\Endurance\Workout\Duration\OpenDuration;
-use Youmad\Endurance\Workout\Duration\TimeDuration;
-use Youmad\Endurance\Workout\Repeat;
-use Youmad\Endurance\Workout\StepPurpose;
-use Youmad\Endurance\Workout\Target\FreeTarget;
-use Youmad\Endurance\Workout\Target\TargetMetric;
-use Youmad\Endurance\Workout\Target\TargetRange;
-use Youmad\Endurance\WorkoutFit\FitWorkoutMapping;
-use Youmad\Endurance\WorkoutFit\FitWorkoutProfileUnavailable;
-use Youmad\Endurance\WorkoutFit\FitWorkoutReader;
-use Youmad\Endurance\WorkoutFit\InvalidFitWorkout;
-use Youmad\Endurance\WorkoutFit\Tests\Fixture\WorkoutFixture as F;
-use Youmad\Endurance\WorkoutFit\UnsupportedFitWorkout;
 
 require_once __DIR__.'/Fixture/WorkoutFixture.php';
 

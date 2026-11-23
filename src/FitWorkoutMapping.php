@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit;
+namespace Endurance\WorkoutFit;
 
-use Youmad\Endurance\Workout\Workout;
+use Endurance\Workout\Workout;
 
 final readonly class FitWorkoutMapping
 {

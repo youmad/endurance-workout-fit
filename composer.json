@@ -1,24 +1,24 @@
 {
-    "name": "youmad/endurance-workout-fit",
+    "name": "endurance/workout-fit",
     "description": "Explicit FIT Workout interpretation into immutable Endurance Workout prescriptions",
     "type": "library",
     "license": "MPL-2.0",
     "require": {
         "php": "^8.5",
-        "youmad/endurance-fit": "^0.1.5",
-        "youmad/endurance-workout": "^0.1.0"
+        "endurance/fit": "^0.2.0",
+        "endurance/workout": "^0.2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^12.5"
     },
     "autoload": {
         "psr-4": {
-            "Youmad\\Endurance\\WorkoutFit\\": "src/"
+            "Endurance\\WorkoutFit\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Youmad\\Endurance\\WorkoutFit\\Tests\\": "tests/"
+            "Endurance\\WorkoutFit\\Tests\\": "tests/"
         }
     },
     "scripts": {

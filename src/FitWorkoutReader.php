@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit;
+namespace Endurance\WorkoutFit;
 
-use Youmad\Endurance\Fit\Decoder\FitDecoder;
-use Youmad\Endurance\Fit\IO\FitInput;
-use Youmad\Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
-use Youmad\Endurance\Workout\Repeat;
-use Youmad\Endurance\Workout\Sequence;
-use Youmad\Endurance\Workout\Step;
-use Youmad\Endurance\Workout\Workout;
-use Youmad\Endurance\WorkoutFit\Internal\WorkoutFields;
-use Youmad\Endurance\WorkoutFit\Internal\WorkoutSteps;
+use Endurance\Fit\Decoder\FitDecoder;
+use Endurance\Fit\IO\FitInput;
+use Endurance\Fit\Profile\Generated\GeneratedFitProfileSet;
+use Endurance\Workout\Repeat;
+use Endurance\Workout\Sequence;
+use Endurance\Workout\Step;
+use Endurance\Workout\Workout;
+use Endurance\WorkoutFit\Internal\WorkoutFields;
+use Endurance\WorkoutFit\Internal\WorkoutSteps;
 
 /** Return only after every CRC and final EOF validate; caller owns input. */
 final readonly class FitWorkoutReader

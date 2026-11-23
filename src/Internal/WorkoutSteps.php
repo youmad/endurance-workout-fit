@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Youmad\Endurance\WorkoutFit\Internal;
+namespace Endurance\WorkoutFit\Internal;
 
-use Youmad\Endurance\Fit\Unified\UnifiedDataMessage;
-use Youmad\Endurance\Workout\Duration\DistanceDuration;
-use Youmad\Endurance\Workout\Duration\OpenDuration;
-use Youmad\Endurance\Workout\Duration\TimeDuration;
-use Youmad\Endurance\Workout\Step;
-use Youmad\Endurance\Workout\StepPurpose;
-use Youmad\Endurance\Workout\Target\FreeTarget;
-use Youmad\Endurance\Workout\Target\TargetMetric;
-use Youmad\Endurance\Workout\Target\TargetRange;
-use Youmad\Endurance\WorkoutFit\InvalidFitWorkout;
-use Youmad\Endurance\WorkoutFit\UnsupportedFitWorkout;
+use Endurance\Fit\Unified\UnifiedDataMessage;
+use Endurance\Workout\Duration\DistanceDuration;
+use Endurance\Workout\Duration\OpenDuration;
+use Endurance\Workout\Duration\TimeDuration;
+use Endurance\Workout\Step;
+use Endurance\Workout\StepPurpose;
+use Endurance\Workout\Target\FreeTarget;
+use Endurance\Workout\Target\TargetMetric;
+use Endurance\Workout\Target\TargetRange;
+use Endurance\WorkoutFit\InvalidFitWorkout;
+use Endurance\WorkoutFit\UnsupportedFitWorkout;
 
 /** @internal */
 final readonly class WorkoutSteps
